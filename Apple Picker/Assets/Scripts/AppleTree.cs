@@ -72,12 +72,11 @@ public class AppleTree : MonoBehaviour
 
     public void IncreaseDifficulty(int round){
         if (speed > 0){
-        speed += round * 0.2f; // Increase speed positively
-    }
-    else{
-        speed -= round * 0.2f; // Increase speed negatively (more negative)
-    }
-        // changeDirChance += round * 0.01f; // Increase the chance of changing direction
+            speed += round * 0.2f; // Increase speed positively
+        }
+        else{
+            speed -= round * 0.2f; // Increase speed negatively (more negative)
+        }
         dropDelay = Mathf.Max(0.1f, dropDelay - round * 0.05f); // Reduce delay between apple drops, but not below 0.1s
     }
 }

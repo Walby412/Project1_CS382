@@ -41,6 +41,14 @@ public class ApplePicker : MonoBehaviour
         }
     }
 
+    public void BranchMissed(){
+        //Destroy the falling Branches
+        GameObject[] appleArray=GameObject.FindGameObjectsWithTag("Branch");
+        foreach (GameObject tempGo in appleArray){
+            Destroy(tempGo);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
